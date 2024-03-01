@@ -1,4 +1,5 @@
 FROM python:3.8-slim
+ENV CURRENT_ENVIRONMENT=dev
 WORKDIR /app
 COPY . /app
 RUN pip install -r requirements.txt
