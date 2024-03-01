@@ -1,0 +1,14 @@
+version: '3'
+services:
+  back:
+    image: mlopsback
+    ports:
+      - "5000:5000"
+    environment:
+      - CURRENT_ENVIRONMENT=dev
+  front:
+    image: mlopsfront
+    ports:
+      - "80:80"
+    environment:
+      - WS_BACK_URL=http://mlopsback:5000
